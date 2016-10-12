@@ -1,0 +1,11 @@
+{
+  "name": "exam-project",
+  "version": "0.1.0",
+  "devDependencies": {
+    "bootstrap": "3.3.*",
+    "font-awesome": "*",
+    "jquery": "3.1.*",
+    "jqueryui": "1.11.*",
+    "slider-pro": "1.3.*"  
+  }
+}
