@@ -1,9 +1,49 @@
 var $items = 1;
+$(window).scroll(function() {
+	var st = $(this).scrollTop();
+	$('.header-text h2, .header-text p').css({
+		'transform': 'translate(0%, '+st/5+ '%)'
+	});
+});
+
+
 $(document).ready(function() {
 	$( '#my-slider' ).sliderPro({
 		width: 188,
 		height: 732,
 	});
+	$( '#item-slider' ).sliderPro({
+			width: 313,
+			height: 378,
+			fade: true,
+			arrows: false,
+			buttons: false,
+			fullScreen: false,
+			shuffle: true,
+			smallSize: 500,
+			mediumSize: 1000,
+			largeSize: 3000,
+			thumbnailArrows: true,
+			autoplay: false
+		});
+
+	var myMap;
+  	ymaps.ready(init); // Ожидание загрузки API с сервера Яндекса
+  	function init () {
+    myMap = new ymaps.Map("map", {
+      center: [46.479695, 30.747930], // Координаты центра карты
+      zoom: 15 // Zoom
+    	});
+    myGeoObject = new ymaps.GeoObject({
+        geometry: {
+            type: "Point",// тип геометрии - точка
+            coordinates: [46.479695, 30.747930] // координаты точки
+       }
+    });
+	myMap.geoObjects.add(myGeoObject); // Размещение геообъекта на карте.
+  	}
+  	
+
 
 	$('.shopping-cart').on('click', function() {
 		if(localStorage.length == 0) {
@@ -44,9 +84,6 @@ $(document).ready(function() {
 			$('#shoppingCartModal').modal();
 		}
 	});
-
-
-
 
 
 	$('.slider-item').not(':first').hide();

@@ -34,10 +34,10 @@
 					<ul class="top-menu">
 						<li><a href="index.html">Home</a></li>
 						<li><a href="item_details.html">Products</a></li>
-						<li><a href="#">About</a></li>
+						<li><a href="about.html">About</a></li>
 						<li><a href="#">Pages</a></li>
 						<li><a href="#">Blog</a></li>
-						<li><a href="#">Contact</a></li>
+						<li><a href="contacts.html">Contact</a></li>
 					</ul>
 				</div>
 				<div class="col-md-offset-2 col-md-3 right">
@@ -57,10 +57,29 @@
 		<div class="row item-info">
 			<div class="col-md-8">
 				<div class="row">
-					<div class="col-md-5">
-						<img src="img/item-1.jpg">
+					<div id="item-slider" class="slider-pro col-md-6">
+						<div class="sp-slides">
+							<div class="sp-slide">
+								<img class="sp-image" src="img/item-1.jpg">
+							</div>
+							<div class="sp-slide">
+								<img class="sp-image" src="img/item-2.jpg">
+							</div>
+							<div class="sp-slide">
+								<img class="sp-image" src="img/item-1.jpg">
+							</div>
+							<div class="sp-slide">
+								<img class="sp-image" src="img/item-2.jpg">
+							</div>
+						</div>
+						<div class="sp-thumbnails">
+							<img class="sp-thumbnail" src="img/item-1.jpg">
+							<img class="sp-thumbnail" src="img/item-2.jpg">
+							<img class="sp-thumbnail" src="img/item-1.jpg">
+							<img class="sp-thumbnail" src="img/item-2.jpg">	
+						</div>	
 					</div>
-					<div class="col-md-7">
+					<div class="col-md-6">
 						<h3>Green Camouflage Utility</h3>
 						<p>
 							<i class="fa fa-star mark" aria-hidden="true"></i>
@@ -401,6 +420,7 @@
 <script src="node_modules/slider-pro/libs/js/jquery-1.11.0.min.js"></script>
 <script src="node_modules/slider-pro/dist/js/jquery.sliderPro.min.js"></script>
 <script src="js/script.js"></script>
+<script src="http://api-maps.yandex.ru/2.0/?load=package.full&lang=ru-RU" type="text/javascript"></script>
 </body>
 </html>
 
