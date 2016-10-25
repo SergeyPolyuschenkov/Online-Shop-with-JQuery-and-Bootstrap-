@@ -14,15 +14,18 @@
 	<div class="container-fluid header-menu-top">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-2 logo">
+				<div class="col-md-2 col-sm-4 col-xs-4 logo">
 					<a href="index.html"><h1>FooseShoes</h1></a>
 				</div>
-				<div class="col-md-offset-5 col-md-5 right">
+				<div class="col-md-offset-5 col-md-5 right col-sm-8 col-xs-8 right">
 					<input type="text" id="search-inp" placeholder="search...">
 					<i id="search-btn" class="fa fa-search" aria-hidden="true"></i>
-					<button id="loginOrRegister">
-						LOGIN or REGISTER
-					</button>
+					<div class="top-right">	
+						<button id="loginOrRegister">
+							LOGIN or REGISTER
+						</button>
+
+					</div>	
 				</div>
 			</div>
 		</div>
@@ -30,17 +33,18 @@
 	<div class="container-fluid header-menu-bottom">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-7">
+				<div class="col-md-7 col-sm-1 col-xs-1">
+				<span class="menu-button"><i class="fa fa-list" aria-hidden="true"></i></span>
 					<ul class="top-menu">
 						<li><a href="index.html">Home</a></li>
-						<li><a href="item_details.html">Products</a></li>
+						<li><a href="products.html">Products</a></li>
 						<li><a href="about.html">About</a></li>
 						<li><a href="#">Pages</a></li>
 						<li><a href="#">Blog</a></li>
 						<li><a href="contacts.html">Contact</a></li>
 					</ul>
 				</div>
-				<div class="col-md-offset-2 col-md-3 right">
+				<div class="col-md-offset-2 col-md-3 col-sm-11 col-xs-11 right">
 					<div class="top-menu-button" id="com">
 						<i class="fa fa-star-o" aria-hidden="true"></i>
 						<span>30</span>
@@ -53,11 +57,15 @@
 			</div>
 		</div>
 	</div>
+
+
+
+
 	<div class="container">
 		<div class="row item-info">
-			<div class="col-md-8">
+			<div class="col-lg-8">
 				<div class="row">
-					<div id="item-slider" class="slider-pro col-md-6">
+					<div id="item-slider" class="slider-pro col-md-6 col-sm-6">
 						<div class="sp-slides">
 							<div class="sp-slide">
 								<img class="sp-image" src="img/item-1.jpg">
@@ -79,7 +87,7 @@
 							<img class="sp-thumbnail" src="img/item-2.jpg">	
 						</div>	
 					</div>
-					<div class="col-md-6">
+					<div class="col-md-6 col-sm-6">
 						<h3>Green Camouflage Utility</h3>
 						<p>
 							<i class="fa fa-star mark" aria-hidden="true"></i>
@@ -295,6 +303,12 @@
 			</div>
 		</div>
 	</div>
+
+
+
+
+
+	
 	<div class="container-fluid widgets-wrapper">
 		<div class="container widgets">
 			<div class="row">
@@ -313,7 +327,7 @@
 				</div>
 				<div class="col-md-4">
 					<h3>FLICKR WIDGET</h3>
-					<img src="img/flickr.png">
+					<a href="http://flickr.com"><img src="img/flickr.png"></a>
 				</div>
 			</div>
 		</div>
@@ -325,11 +339,11 @@
 					<input type="mail" placeholder="Enter email for newsletter"><button>></button>
 				</div>
 				<div class="col-md-offset-5 col-md-4">	
-					<a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-					<a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-					<a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
-					<a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-					<a href="#"><i class="fa fa-flickr" aria-hidden="true"></i></a>
+					<a href="http://facebook.com"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+					<a href="http://twitter.com"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+					<a href="http://google.com"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+					<a href="http://linkedin.com"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+					<a href="http://flickr.com"><i class="fa fa-flickr" aria-hidden="true"></i></a>
 				</div>	
 			</div>
 		</div>
@@ -355,15 +369,28 @@
         <h4 class="modal-title">Please, enter your login and password</h4>
       </div>
       <div class="modal-body">
-        <form>
-        	<input type="text" class="form-control" placeholder="Login">
-        	<input type="password" class="form-control" placeholder="Password">
-        	<button type="button" class="btn btn-primary" id="signUp">Sign Up</button>
+        <form id="form">
+
+        	<div class="form-group row login-row">
+        		<div class="col-xs-12">	
+        			<input type="text" class="col-xs-10 form-control control-label " placeholder="Login" id="login-name">
+				</div>
+        		<span class="col-xs-5 help-block help-block-login">Please, check your login name.</span>
+        	</div>	
+			<div class="form-group row password-row">
+				<div class="col-xs-12">	
+        			<input type="password" class="col-xs-10 form-control control-label" placeholder="Password" id="login-password">
+				</div>
+        		<span class="col-xs-5 help-block help-block-password">Please, check your password.</span>
+
+
+        	</div>	
+        	<button type="button" class="btn btn-link" id="signUp">Sign Up</button>
         </form>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Dismiss</button>
-        <button type="button" class="btn btn-primary">Log In</button>
+        <button type="button" class="btn btn-primary" id="login">Log In</button>
       </div>
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
@@ -378,19 +405,35 @@
       </div>
       <div class="modal-body">
 		<form>
-        	<input type="text" class="form-control" placeholder="Name">
-        	<input type="email" class="form-control" placeholder="Email">
-        	<input type="password" class="form-control" placeholder="Password">
-        	
+
+			<div class="form-group row login-row">
+        		<div class="col-xs-12">	
+        			<input type="text" class="col-xs-10 form-control control-label " placeholder="Name" id="signup-name">
+				</div>
+        		<span class="col-xs-5 help-block help-block-login">Please, check your name.</span>
+        	</div>	
+			<div class="form-group row email-row">
+        		<div class="col-xs-12">	
+        			<input type="email" class="col-xs-10 form-control control-label " placeholder="Email" id="signup-email">
+				</div>
+        		<span class="col-xs-5 help-block help-block-email">Please, check your email.</span>
+        	</div>	
+			<div class="form-group row password-row">
+				<div class="col-xs-12">	
+        			<input type="password" class="col-xs-10 form-control control-label" placeholder="Password" id="signup-password">
+				</div>
+        		<span class="col-xs-5 help-block help-block-password">Please, check your password.</span>
+        	</div>	        	
         </form>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-success" id="signUp">Sign Up</button>
+        <button type="button" class="btn btn-success" id="register">Sign Up</button>
       </div>
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
+
 
 
 <div class="modal fade" tabindex="-1" role="dialog" id="shoppingCartModal">
@@ -400,11 +443,23 @@
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h4 class="modal-title">Shopping Cart</h4>
       </div>
-      <div class="modal-body shopping-items">
-      	
-      </div>
+
+		<div class="modal-body">
+			<h3>Items in your shopping cart:</h3>
+      		<table class="table table-striped">
+	      		<thead>
+			    <tr>
+			      <th>Item name:</th>
+			      <th>Quantity:</th>
+			    </tr>
+			  </thead>
+      			<tbody class="table shopping-items">
+      				
+      			</tbody>
+      		</table>
+		</div>
       <div class="modal-footer">
-      	<button type="button" class="btn btn-warning" id="clear-list">Clear List</button>
+      	<button type="button" class="btn btn-warning" id="clear-list" data-toggle="confirmation">Clear List</button>
         <button type="button" class="btn btn-default" data-dismiss="modal">Resume shopping</button>
         <button type="button" class="btn btn-success" id="signUp">Buy It!</button>
       </div>
@@ -412,15 +467,54 @@
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 
+<div class="modal fade" tabindex="-1" role="dialog" id="emptyShoppingCartModal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Shopping Cart</h4>
+      </div>
+      <div class="modal-body">
+      	<h3>Your shopping cart is empty</h3>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Resume shopping</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+
+
+
+
+
+
+<div class="modal fade" tabindex="-1" role="dialog" id="clearModal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Are you sure?</h4>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Do not clear</button>
+        <button type="button" class="btn btn-danger" id="reallyClear">Clear shopping cart</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 
 
 <script src="node_modules/jquery/dist/jquery.js"></script>
 <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="node_modules/jqueryui/jquery-ui.min.js"></script>
-<script src="node_modules/slider-pro/libs/js/jquery-1.11.0.min.js"></script>
 <script src="node_modules/slider-pro/dist/js/jquery.sliderPro.min.js"></script>
-<script src="js/script.js"></script>
+<script type="text/javascript" src="node_modules/bootstrap/js/tooltip.js"></script>
+<script type="text/javascript" src="node_modules/bootstrap-confirmation/bootstrap-confirmation.js"></script>
 <script src="http://api-maps.yandex.ru/2.0/?load=package.full&lang=ru-RU" type="text/javascript"></script>
+<script src="js/script.js"></script>
 </body>
 </html>
 

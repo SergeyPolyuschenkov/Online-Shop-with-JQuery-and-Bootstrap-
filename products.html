@@ -2,26 +2,30 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Online-Shop</title>
-	<link href="//db.onlinewebfonts.com/c/0ba7db29f9f2b275516bb07240367237?family=STHeiti+T0C" rel="stylesheet" type="text/css">
-	<link rel="stylesheet" href="bootstrap/bootstrap.min.css">
-	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<title>FooseShoes</title>
+	<!-- <link href="//db.onlinewebfonts.com/c/0ba7db29f9f2b275516bb07240367237?family=STHeiti+T0C" rel="stylesheet" type="text/css"> -->
+	<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="node_modules/jqueryui/jquery-ui.min.css">
+	<link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="node_modules/slider-pro/dist/css/slider-pro.min.css">
 	<link rel="stylesheet" href="css/main.css">
-	<script src="js/jquery.js"></script>
-	<script src="js/script.js"></script>
 </head>
 <body>
 	<div class="container-fluid header-menu-top">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-2 logo">
+				<div class="col-md-2 col-sm-4 col-xs-4 logo">
 					<a href="index.html"><h1>FooseShoes</h1></a>
 				</div>
-				<div class="col-md-offset-7 col-md-3 right">
-					<a href=""><i class="fa fa-search" aria-hidden="true"></i></a>
-					<button>
-						LOGIN or REGISTER
-					</button>
+				<div class="col-md-offset-5 col-md-5 right col-sm-8 col-xs-8 right">
+					<input type="text" id="search-inp" placeholder="search...">
+					<i id="search-btn" class="fa fa-search" aria-hidden="true"></i>
+					<div class="top-right">	
+						<button id="loginOrRegister">
+							LOGIN or REGISTER
+						</button>
+
+					</div>	
 				</div>
 			</div>
 		</div>
@@ -29,193 +33,66 @@
 	<div class="container-fluid header-menu-bottom">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-7">
+				<div class="col-md-7 col-sm-1 col-xs-1">
+				<span class="menu-button"><i class="fa fa-list" aria-hidden="true"></i></span>
 					<ul class="top-menu">
-						<li><a href="#">Home</a></li>
-						<li><a href="#">Products</a></li>
-						<li><a href="#">About</a></li>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="products.html">Products</a></li>
+						<li><a href="about.html">About</a></li>
 						<li><a href="#">Pages</a></li>
 						<li><a href="#">Blog</a></li>
-						<li><a href="#">Contact</a></li>
+						<li><a href="contacts.html">Contact</a></li>
 					</ul>
 				</div>
-				<div class="col-md-offset-2 col-md-3 right">
-					<button class="top-menu-button" id="com">
+				<div class="col-md-offset-2 col-md-3 col-sm-11 col-xs-11 right">
+					<div class="top-menu-button" id="com">
 						<i class="fa fa-star-o" aria-hidden="true"></i>
 						<span>30</span>
-					</button>
-					<button class="top-menu-button" id="buy">
+					</div>
+					<div class="top-menu-button" id="shopping-cart-main" id="buy">
 						<i class="fa fa-shopping-cart" aria-hidden="true"></i>
 						<span>0</span>
-					</button>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	<div class="container slider">
-		<div class="row slider-item">
-			<div class="col-md-6">
-				<img src="img/legs.png">
-			</div>
-			<div class="col-md-6">
-				<div class="price">
-					<span>$145,99</span>
-				</div>
-				<h1>Pink Shoes 2013 Collection</h1>
-				<p>Nunc non fermentum nunc. Sed ut ante eget leo tempor consequat sit amet eu orci. Donec dignissim dolor eget..</p>
-				<div class="button-line">
-					<div><a href=""><i class="fa fa-eye" aria-hidden="true"></i></a></div>
-					<div><a href=""><i class="fa fa-star-o" aria-hidden="true"></i></a></div>
-					<div><a href=""><i class="fa fa-share-square-o" aria-hidden="true"></i></a></div>
-					<div><a href=""><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></div>
-				</div>
-			</div>	
-		</div>
-	</div>
-	<div class="container-fluid slider-menu">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12 items">
-					<div><a href="#"><h3>Pink Shoes</h3><p>Now af $145,99</p></a></div>
-					<div><a href="#"><h3>Anna Field</h3><p>Limited Edition</p></a></div>
-					<div><a href="#"><h3>Prada</h3><p>Summer is coming</p></a></div>
-					<div><a href="#"><h3>Casadei</h3><p>All Colors avaiable</p></a></div>
-					<div><a href="#"><h3>Mellow Yellow</h3><p>Free delivery</p></a></div>
-				</div>
-			</div>
-		</div>	
-	</div>
-	<div class="container-fluid offers-wrapper">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12 offers">
-					<div><a href="#"><img src="img/offer1.jpg"></a><span>on sale</span></div>
-					<div><a href="#"><img src="img/offer2.jpg"></a><span>special offers</span></div>
-					<div><a href="#"><img src="img/offer3.jpg"></a><span>must have</span></div>
-				</div>
-			</div>
-		</div>	
-	</div>
-	<div class="container new-arr">
+	<div class="container shop-items products-list">
 		<div class="row">
 			<div class="col-md-4">
-				<h3>New arrivals on FooseShoes</h3>
-			</div>
-			<div class="col-md-offset-6 col-md-2">
-				<button class="show-all">Show All</button>
+				<h2>Our items:</h2>
 			</div>
 		</div>
-		<div class="row shop-items">
-			<div class="shop-item">
-				<div class="item-top">
-					<img src="img/item-1.jpg">
-				</div>
-				<div class="item-bottom">
-					<div class="price"><span>$145,99</span></div>
-					<p>Even&Odd</p>
-				</div>
-			</div>
-			<div class="shop-item">
-				<div class="item-top">
-					<img src="img/item-1.jpg">
-					<div class="price onsale"><span>ON SALE!</span></div>
-				</div>
-				<div class="item-bottom">
-					<div class="price"><span>$145,99</span></div>
-					<p>Even&Odd</p>
-				</div>
-			</div>
-			<div class="shop-item">
-				<div class="item-top">
-					<img src="img/item-1.jpg">
-				</div>
-				<div class="item-bottom">
-					<div class="price"><span>$145,99</span></div>
-					<p>Buffalo</p>
-				</div>
-			</div>
-		</div>
-	</div>
+		<div class="row itemsArr">
+			
 
-	<div class="container new-arr">
-		<div class="row">
-			<div class="col-md-4">
-				<h3>Best sellers of the month</h3>
-			</div>
-			<div class="col-md-offset-6 col-md-2">
-				<button class="show-all">Show All</button>
-			</div>
 		</div>
-		<div class="row shop-items">
-			<div class="shop-item">
-				<div class="item-top">
-					<img src="img/item-1.jpg">
-				</div>
-				<div class="item-bottom">
-					<div class="price"><span>$145,99</span></div>
-					<div class="button-line">
-						<div><a href=""><i class="fa fa-eye" aria-hidden="true"></i></a></div>
-						<div><a href=""><i class="fa fa-star-o" aria-hidden="true"></i></a></div>
-						<div><a href=""><i class="fa fa-share-square-o" aria-hidden="true"></i></a></div>
-						<div><a href=""><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></div>
-					</div>
-				</div>
-			</div>
-			<div class="shop-item">
-				<div class="item-top">
-					<img src="img/item-1.jpg">
-				</div>
-				<div class="item-bottom">
-					<div class="price"><span>$145,99</span></div>
-					<p>Even&Odd</p>
-				</div>
-			</div>
-			<div class="shop-item">
-				<div class="item-top">
-					<img src="img/item-1.jpg">
-					<div class="price outofstock"><span>OUT OF STOCK</span></div>
-				</div>
-				<div class="item-bottom">
-					<div class="price"><span>$145,99</span></div>
-					<p>Buffalo</p>
-				</div>
-			</div>
-		</div>
+
+
+
+
+
+
+
 	</div>
-	<div class="container news">
-		<div class="row">
-			<div class="col-md-3 news-item">
-				<h1>Free Shipping</h1>
-				<p>Vivamus metus turpis, bibendum vitae euismod vel, vulputate vel nibh. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec erat sem</p>
-			</div>
-			<div class="col-md-3 news-item">
-				<h1>Testimonials</h1>
-				<p>vel, vulputate vel nibh. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec erat sem, vehicula id dictum sit [...]</p>
-				<p> - John Doe - </p>
-			</div>
-			<div class="col-md-6 news-item wide">
-				<h1>Blog news</h1>
-				<div>
-					<div class="date">
-						<span>apr 01</span>
-					</div>
-					<div class="text">
-						<h3>Nice & clean. The best for you blog!</h3>
-						<p>Vivamus metus turpis, bibendum vitae euismod vel, vulputate vel</p>
-					</div>	
-				</div>
-				<div>
-					<div class="date">
-						<span>apr 01</span>
-					</div>
-					<div class="text">
-						<h3>Nice & clean. The best for you blog!</h3>
-						<p>Vivamus metus turpis, bibendum vitae euismod vel, vulputate vel</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+	
+
+
+
+			<!-- '<div class="shop-item"><div class="item-top"><img src="'+itemsArr[i].img+'"></div><div class="item-bottom"><div class="price"><span>$'+itemsArr[i].price+'</span></div><p class="item-name">'+itemsArr[i].name+'</p><div class="button-line"><div><i class="fa fa-eye" aria-hidden="true"></i></div><div><i class="fa fa-star-o" aria-hidden="true"></i></div><div><i class="fa fa-share-square-o" aria-hidden="true"></i></div><div><i data-id="Buffalo" class="fa fa-shopping-cart shopping-cart" aria-hidden="true"></i></div></div></div></div>' -->
+
+
+
+
+
+
+
+
+
+
+
+
+
 	<div class="container-fluid widgets-wrapper">
 		<div class="container widgets">
 			<div class="row">
@@ -234,7 +111,7 @@
 				</div>
 				<div class="col-md-4">
 					<h3>FLICKR WIDGET</h3>
-					<img src="img/flickr.png">
+					<a href="http://flickr.com"><img src="img/flickr.png"></a>
 				</div>
 			</div>
 		</div>
@@ -246,11 +123,11 @@
 					<input type="mail" placeholder="Enter email for newsletter"><button>></button>
 				</div>
 				<div class="col-md-offset-5 col-md-4">	
-					<a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-					<a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-					<a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
-					<a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-					<a href="#"><i class="fa fa-flickr" aria-hidden="true"></i></a>
+					<a href="http://facebook.com"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+					<a href="http://twitter.com"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+					<a href="http://google.com"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+					<a href="http://linkedin.com"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+					<a href="http://flickr.com"><i class="fa fa-flickr" aria-hidden="true"></i></a>
 				</div>	
 			</div>
 		</div>
@@ -269,5 +146,453 @@
 		</div>
 	</div>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="modal fade large" tabindex="-1" role="dialog" id="item-details">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Shopping Cart</h4>
+      </div>
+      <div class="modal-body ">
+
+
+
+	<div class="container">
+		<div class="row item-info">
+			<div class="col-lg-8 col-md-8">
+				<div class="row">
+					<div id="item-slider" class="slider-pro col-md-5 col-sm-5">
+						<div class="sp-slides">
+							<div class="sp-slide">
+								<img class="sp-image" src="img/item-1.jpg">
+							</div>
+							<div class="sp-slide">
+								<img class="sp-image" src="img/item-2.jpg">
+							</div>
+							<div class="sp-slide">
+								<img class="sp-image" src="img/item-1.jpg">
+							</div>
+							<div class="sp-slide">
+								<img class="sp-image" src="img/item-2.jpg">
+							</div>
+						</div>
+						<div class="sp-thumbnails">
+							<img class="sp-thumbnail" src="img/item-1.jpg">
+							<img class="sp-thumbnail" src="img/item-2.jpg">
+							<img class="sp-thumbnail" src="img/item-1.jpg">
+							<img class="sp-thumbnail" src="img/item-2.jpg">	
+						</div>	
+					</div>
+					<div class="col-md-5 col-sm-5">
+						<h3>Green Camouflage Utility</h3>
+						<p>
+							<i class="fa fa-star mark" aria-hidden="true"></i>
+							<i class="fa fa-star mark" aria-hidden="true"></i>
+							<i class="fa fa-star mark" aria-hidden="true"></i>
+							<i class="fa fa-star-o mark" aria-hidden="true"></i>
+							<i class="fa fa-star-o mark" aria-hidden="true"></i>
+							<span>2 Review (s) | <a href="/">Add Your Review</a></span>
+						</p>
+						<p class="info-text">
+							Vestibulum ante ipsum primis in faucibus orci luctus et ultrrd rice posuere cubilia Curae; Aenean eleifend laoreet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrrd rice posuere cubilia Curae; Aenean eleifend laoreet vestibulum ante ipsum. Vestib ulum ante ipsum primis in faucibus orci luctus et ultrrd rice pos uere cubilia. Aenean eleifend laoreet vestibulum ante ipsum.
+						</p>
+
+						<div class="row availability">
+							<div class="col-md-5">
+								<span>Availability: <span class="red">In Stock</span></span>	
+							</div>
+							<div class="col-md-offset-3 col-md-4">
+								<span>Quantity: </span>
+									<select class="form-control" id="sel1">
+										<option>01</option>
+										<option>02</option>
+										<option>03</option>
+										<option>04</option>
+										<option>05</option>
+									</select>
+							</div>
+						</div>	
+
+						<div class="row price-and-buy">
+							<div class="col-md-5">
+								<span class="red item-price">$ 130.00</span>	
+							</div>
+							<div class="col-md-offset-3 col-md-4 shop-button">
+								<i class="fa fa-shopping-cart" aria-hidden="true"></i>
+								<span>Add To Wishlist</span>
+							</div>
+						</div>	
+
+						<div class="row add-and-email">
+							<div class="col-md-4">
+								<i class="fa fa-user-plus" aria-hidden="true"></i>
+								<span>Add To Wishlist</span>
+							</div>
+							<div class="col-md-4">
+								<i class="fa fa-files-o" aria-hidden="true"></i>
+								<span>Add To compare</span>
+							</div>
+							<div class="col-md-4">
+								<i class="fa fa-envelope" aria-hidden="true"></i>
+								<span>Email To a Friend</span>
+							</div>
+						</div>
+						<div class="row right scbtn">
+							<a href="http://facebook.com"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+							<a href="http://twitter.com"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+							<a href="http://google.com"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+							<a href="http://linkedin.com"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+							<a href="http://flickr.com"><i class="fa fa-flickr" aria-hidden="true"></i></a>
+						</div>
+					</div>
+				</div>
+
+				<div class="row tabs">
+					<div class="col-md-12">
+						<div class="item-tab active">Decription</div>
+						<div class="item-tab">tags</div>
+						<div class="item-tab">reviews</div>
+						<div class="item-tab">custom tab</div>
+					</div>
+				</div>
+				
+
+				<div class="row tab tab-description">
+					<div class="col-md-8">
+						<h3>Description</h3>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+					</div>
+				</div>
+
+				<div class="row tab tab-tags">
+					<div class="col-md-8">
+						<h3>Tags</h3>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+					</div>
+				</div>
+				<div class="row tab tab-reviews">
+					<div class="col-md-6 tab-comments">
+						<h3>CUSTOMER REVIEWS</h3>
+						<div class="comments-scroll">
+							<div class="comment">
+								<h4>Lorem ipsum</h4>
+								<p>
+									<i class="fa fa-star mark" aria-hidden="true"></i>
+									<i class="fa fa-star mark" aria-hidden="true"></i>
+									<i class="fa fa-star mark" aria-hidden="true"></i>
+									<i class="fa fa-star-o mark" aria-hidden="true"></i>
+									<i class="fa fa-star-o mark" aria-hidden="true"></i>
+									<span class="red">06 / Oct / 2012</span>
+								</p>
+								<p>“Lorem ipsum dolor sit amet, consectetur adipis cing elit.  Aliquam suscipit nisl in adipiscin”</p>
+							</div>	
+							<div class="comment">
+								<h4>Lorem ipsum</h4>
+								<p>
+									<i class="fa fa-star mark" aria-hidden="true"></i>
+									<i class="fa fa-star mark" aria-hidden="true"></i>
+									<i class="fa fa-star mark" aria-hidden="true"></i>
+									<i class="fa fa-star-o mark" aria-hidden="true"></i>
+									<i class="fa fa-star-o mark" aria-hidden="true"></i>
+									<span class="red">5 / Oct / 2012</span>
+								</p>
+								<p>“Lorem ipsum dolor sit amet, consectetur adipis cing elit.  Aliquam suscipit nisl in adipiscin”</p>
+							</div>	
+							<div class="comment">
+								<h4>Lorem ipsum</h4>
+								<p>
+									<i class="fa fa-star mark" aria-hidden="true"></i>
+									<i class="fa fa-star mark" aria-hidden="true"></i>
+									<i class="fa fa-star mark" aria-hidden="true"></i>
+									<i class="fa fa-star-o mark" aria-hidden="true"></i>
+									<i class="fa fa-star-o mark" aria-hidden="true"></i>
+									<span class="red">5 / Oct / 2012</span>
+								</p>
+								<p>“Lorem ipsum dolor sit amet, consectetur adipis cing elit.  Aliquam suscipit nisl in adipiscin”</p>
+							</div>	
+							<div class="comment">
+								<h4>Lorem ipsum</h4>
+								<p>
+									<i class="fa fa-star mark" aria-hidden="true"></i>
+									<i class="fa fa-star mark" aria-hidden="true"></i>
+									<i class="fa fa-star mark" aria-hidden="true"></i>
+									<i class="fa fa-star-o mark" aria-hidden="true"></i>
+									<i class="fa fa-star-o mark" aria-hidden="true"></i>
+									<span class="red">5 / Oct / 2012</span>
+								</p>
+								<p>“Lorem ipsum dolor sit amet, consectetur adipis cing elit.  Aliquam suscipit nisl in adipiscin”</p>
+							</div>	
+							<div class="comment">
+								<h4>Lorem ipsum</h4>
+								<p>
+									<i class="fa fa-star mark" aria-hidden="true"></i>
+									<i class="fa fa-star mark" aria-hidden="true"></i>
+									<i class="fa fa-star mark" aria-hidden="true"></i>
+									<i class="fa fa-star-o mark" aria-hidden="true"></i>
+									<i class="fa fa-star-o mark" aria-hidden="true"></i>
+									<span class="red">5 / Oct / 2012</span>
+								</p>
+								<p>“Lorem ipsum dolor sit amet, consectetur adipis cing elit.  Aliquam suscipit nisl in adipiscin”</p>
+							</div>	
+							<div class="comment">
+								<h4>Lorem ipsum</h4>
+								<p>
+									<i class="fa fa-star mark" aria-hidden="true"></i>
+									<i class="fa fa-star mark" aria-hidden="true"></i>
+									<i class="fa fa-star mark" aria-hidden="true"></i>
+									<i class="fa fa-star-o mark" aria-hidden="true"></i>
+									<i class="fa fa-star-o mark" aria-hidden="true"></i>
+									<span class="red">04 / Oct / 2012</span>
+								</p>
+								<p>“Lorem ipsum dolor sit amet, consectetur adipis cing elit.  Aliquam suscipit nisl in adipiscin”</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 write-comment">
+						<h3>WRITE YOUR OWN REVIEW</h3>
+						<form>
+						<p>Your name<span class="red">*</span></p>
+						<input class="form-control" type="text" name="name">
+						<p>Summary of Your Review<span class="red">*</span></p>
+						<input class="form-control" type="text" name="sum">
+						<p>Review<span class="red">*</span></p>
+						<textarea name="rev" cols="30" rows="3" class="form-control"></textarea>
+						<button type="button" class="btn btn-default">Submit</button>
+						</form>
+					</div>
+				</div>
+
+
+				<div class="row tab tab-custom">
+					<div class="col-md-8">
+						<h3>Custom Tab</h3>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4 items-slider">
+				<h4>featured products</h4>
+				<div class="slider-pro" id="my-slider">
+					<div class="sp-slides">
+						<!-- Slide 1 -->
+						<div class="sp-slide">
+								<img src="img/girl1.jpg">
+								<img src="img/girl2.jpg">
+								<img src="img/girl3.jpg">	
+						</div>
+						
+						<!-- Slide 2 -->
+						<div class="sp-slide">
+							<img src="img/girl2.jpg">
+							<img src="img/girl3.jpg">
+							<img src="img/girl1.jpg">
+						</div>
+						
+						<!-- Slide 3 -->
+						<div class="sp-slide">
+							<img src="img/girl3.jpg">
+							<img src="img/girl1.jpg">
+							<img src="img/girl2.jpg">
+						</div>
+					</div>
+				</div>				
+			</div>
+		</div>
+	</div>
+
+
+
+      	
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Resume shopping</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="modal fade" tabindex="-1" role="dialog" id="loginOrRegisterModal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Please, enter your login and password</h4>
+      </div>
+      <div class="modal-body">
+        <form id="form">
+
+        	<div class="form-group row login-row">
+        		<div class="col-xs-12">	
+        			<input type="text" class="col-xs-10 form-control control-label " placeholder="Login" id="login-name">
+				</div>
+        		<span class="col-xs-5 help-block help-block-login">Please, check your login name.</span>
+        	</div>	
+			<div class="form-group row password-row">
+				<div class="col-xs-12">	
+        			<input type="password" class="col-xs-10 form-control control-label" placeholder="Password" id="login-password">
+				</div>
+        		<span class="col-xs-5 help-block help-block-password">Please, check your password.</span>
+
+
+        	</div>	
+        	<button type="button" class="btn btn-link" id="signUp">Sign Up</button>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Dismiss</button>
+        <button type="button" class="btn btn-primary" id="login">Log In</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div class="modal fade" tabindex="-1" role="dialog" id="signUpModal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Registration</h4>
+      </div>
+      <div class="modal-body">
+		<form>
+
+			<div class="form-group row login-row">
+        		<div class="col-xs-12">	
+        			<input type="text" class="col-xs-10 form-control control-label " placeholder="Name" id="signup-name">
+				</div>
+        		<span class="col-xs-5 help-block help-block-login">Please, check your name.</span>
+        	</div>	
+			<div class="form-group row email-row">
+        		<div class="col-xs-12">	
+        			<input type="email" class="col-xs-10 form-control control-label " placeholder="Email" id="signup-email">
+				</div>
+        		<span class="col-xs-5 help-block help-block-email">Please, check your email.</span>
+        	</div>	
+			<div class="form-group row password-row">
+				<div class="col-xs-12">	
+        			<input type="password" class="col-xs-10 form-control control-label" placeholder="Password" id="signup-password">
+				</div>
+        		<span class="col-xs-5 help-block help-block-password">Please, check your password.</span>
+        	</div>	        	
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-success" id="register">Sign Up</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+
+<div class="modal fade" tabindex="-1" role="dialog" id="shoppingCartModal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Shopping Cart</h4>
+      </div>
+
+		<div class="modal-body">
+			<h3>Items in your shopping cart:</h3>
+      		<table class="table table-striped">
+	      		<thead>
+			    <tr>
+			      <th>Item name:</th>
+			      <th>Quantity:</th>
+			    </tr>
+			  </thead>
+      			<tbody class="table shopping-items">
+      				
+      			</tbody>
+      		</table>
+		</div>
+      <div class="modal-footer">
+      	<button type="button" class="btn btn-warning" id="clear-list" data-toggle="confirmation">Clear List</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Resume shopping</button>
+        <button type="button" class="btn btn-success" id="signUp">Buy It!</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div class="modal fade" tabindex="-1" role="dialog" id="emptyShoppingCartModal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Shopping Cart</h4>
+      </div>
+      <div class="modal-body">
+      	<h3>Your shopping cart is empty</h3>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Resume shopping</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+
+
+
+
+
+
+<div class="modal fade" tabindex="-1" role="dialog" id="clearModal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Are you sure?</h4>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Do not clear</button>
+        <button type="button" class="btn btn-danger" id="reallyClear">Clear shopping cart</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<script src="node_modules/jquery/dist/jquery.js"></script>
+<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="node_modules/jqueryui/jquery-ui.min.js"></script>
+<script src="node_modules/slider-pro/dist/js/jquery.sliderPro.min.js"></script>
+<script type="text/javascript" src="node_modules/bootstrap/js/tooltip.js"></script>
+<script type="text/javascript" src="node_modules/bootstrap-confirmation/bootstrap-confirmation.js"></script>
+<script src="http://api-maps.yandex.ru/2.0/?load=package.full&lang=ru-RU" type="text/javascript"></script>
+<script src="js/script.js"></script>
+
+
 </body>
 </html>
+
